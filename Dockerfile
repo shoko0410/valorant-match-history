@@ -8,10 +8,10 @@ WORKDIR /valorant-match-history
 
 RUN pip install -r requirements.txt
 
-EXPOSE 6000
+EXPOSE 5000
 
 ENTRYPOINT [ "python" ]
 
-RUN sed -i 's/debug=True/debug=False, host="0.0.0.0", port=6000/g' wsgi.py
+RUN sed -i 's/debug=True/debug=False, host="0.0.0.0", port=5000/g' wsgi.py
 
 CMD [ "wsgi.py" ]
